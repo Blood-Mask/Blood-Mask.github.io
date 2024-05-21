@@ -3,104 +3,6 @@
 <head>
 
 
-      <style>
-            * {
-            box-sizing: border-box;
-            }
-
-                  .slider {
-            width: 500px;
-            text-align: center;
-            overflow: hidden;
-            }
-
-                  .slides {
-            display: flex;
-            
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            
-            
-            
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            
-            
-            }
-            .slides::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
-            }
-            .slides::-webkit-scrollbar-thumb {
-            background: black;
-            border-radius: 10px;
-            }
-            .slides::-webkit-scrollbar-track {
-            background: transparent;
-            }
-            .slides > div {
-            scroll-snap-align: start;
-            flex-shrink: 0;
-            width: 500px;
-            max-height: 300px;
-            margin-right: 50px;
-            border-radius: 10px;
-            background: rgb(24, 24, 24);
-            color: white;
-            transform-origin: center center;
-            transform: scale(1);
-            transition: transform 0.5s;
-            position: relative;
-            border: 1px solid black;
-            padding: 10px;
-            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            }
-            .author-info {
-            background: rgba(0, 0, 0, 0.75);
-            color: white;
-            padding: 0.75rem;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            margin: 0;
-            }
-            .author-info a {
-            color: white;
-            }
-
-            .slider > a {
-            display: inline-flex;
-            width: 1.5rem;
-            height: 1.5rem;
-            background: white;
-            text-decoration: none;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin: 0 0 0.5rem 0;
-            position: relative;
-            }
-            .slider > a:active {
-            top: 1px;
-            }
-            .slider > a:focus {
-            background: #7c7c7c;
-            }
-
-            
-            .slider > a{
-                  font-size: 20px;
-                  color: white;
-                  background-color: rgb(24, 24, 24);
-                  text-decoration: none;
-            }
-      </style>
-
 
 
 
@@ -131,6 +33,7 @@
             <div class="album" style="margin-bottom: 100px;">
                   <div class="center" align="center">
                   <div class="asideTrackList" style="display: none;" id="asideTrackList">
+                        <button id="closeAsideTrackList" style="background: none; color: white; border: none; float: left; font-size: 20px;">✖︎</button>
                         <span align="center" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 30px;">So to whom it is</span> <br>
                         <button class="track" id="track1">AND IT IS PROBABLY GONE!</button> <br>
                         <button class="track" id="track2">BARELY ALIVE</button><br>
@@ -152,7 +55,7 @@
                   <div class="imageAlbum">
                         <button class="albumButton">
                               <div class="backdfgd">
-                                    <img src="img/SO TO WHOM IT IS.png" class="albumIMG" id="albumIMG" style="z-index: -1;"> 
+                                    <img src="img/SO TO WHOM IT IS.png" class="albumIMG" id="albumIMG"> 
                               </div>
                         </button>
                         <p class="nameAlbum">So to whom it is</p>
@@ -164,6 +67,7 @@
             <div class="album" id="album1" style="padding-bottom: 100px; display: block;">
                   <div class="center" align="center">
                   <div class="asideTrackList2" style="display: none;" id="asideTrackList2">
+                        <button id="closeAsideTrackList2" style="background: none; color: white; border: none; float: left; font-size: 20px;">✖︎</button>
                         <span align="center" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 30px;">Blood Mask, GRXANXATE, PAnamilor</span> <br>
                         <button class="track" id="track1-1">DEAD EYES</button> <br>
                         <button class="track" id="track2-1">RESTRICT</button><br>
@@ -187,7 +91,41 @@
             </div>
       </div>
 
-
+<script> // CLOSE ASIDE-TRACK-LIST1
+var closeAsideTrackList = document.getElementById("closeAsideTrackList")
+closeAsideTrackList.onclick = () => {
+      for(let j = 0; j < tracks.length; j++){
+                        document.getElementById(tracks[j]).style.color = "white"
+            }
+            audio1.pause()
+            audio2.pause()
+            audio3.pause()
+            audio4.pause()
+            audio5.pause()
+            audio6.pause()
+            audio7.pause()
+            audio8.pause()
+            audio9.pause()
+            audio10.pause()
+            audio11.pause()
+            audio12.pause()
+            audio13.pause()
+            audio14.pause()
+            asideTrackList.style.display = "none"
+}
+</script>
+<script> // CLOSE ASIDE-TRACK-LIST2
+var closeAsideTrackList2 = document.getElementById("closeAsideTrackList2")
+closeAsideTrackList2.onclick = () => {
+      for(let j = 0; j < tracksFT.length; j++){
+                        document.getElementById(tracksFT[j]).style.color = "white"
+            }
+            audio3FT.pause()
+            audio2FT.pause()
+            audio1FT.pause()
+            asideTrackList2.style.display = "none"
+}
+</script>
 <script> // DATE
 const date = new Date(2024, 5, 24)
 const now = new Date()
@@ -210,12 +148,29 @@ albumIMG.onclick = () => {
             asideTrackList.style.display = "block"
             asideTrackList2.style.display = "none"
             audio1FT.pause()
-                  audio2FT.pause()
-                  audio3FT.pause()
-                  for(let j = 0; j < tracksFT.length; j++){
-                        document.getElementById(tracksFT[j]).style.color = "white"
-                  }
+            audio2FT.pause()
+            audio3FT.pause()
+            for(let j = 0; j < tracks.length; j++){
+                  document.getElementById(tracks[j]).style.color = "white"
+            }
       }else{
+            for(let j = 0; j < tracks.length; j++){
+                        document.getElementById(tracks[j]).style.color = "white"
+            }
+            audio1.pause()
+            audio2.pause()
+            audio3.pause()
+            audio4.pause()
+            audio5.pause()
+            audio6.pause()
+            audio7.pause()
+            audio8.pause()
+            audio9.pause()
+            audio10.pause()
+            audio11.pause()
+            audio12.pause()
+            audio13.pause()
+            audio14.pause()
             asideTrackList.style.display = "none"
       }
 }
