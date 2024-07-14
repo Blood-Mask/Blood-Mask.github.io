@@ -258,15 +258,13 @@ else if(d.getDate() == 16 && d.getMonth() == 7){
 <script>
 var obrechen = new Audio()
 obrechen.src = 'music/obrechen.mp3'
-obrechen.preload = true 
 
 var tryvoga = new Audio()
 tryvoga.src = 'music/tryvoga.mp3'
-tryvoga.preload = true 
 
 var zagin = new Audio()
 zagin.src = 'music/zagin.mp3'
-zagin.preload = true 
+
 $('.musicBox1 > .playMusic').click(() => {
       if($('.musicBox1 > .playMusic').text() == 'Play'){
             tryvoga.play()
