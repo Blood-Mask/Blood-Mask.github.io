@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Love Widget</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" href="gradient-heart_78370-478.avif" type="image/x-icon">
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+      
+      <div class="head">
+            <button style="float: left;">∥</button>
+            <p>Love Widget</p>
+      </div>
+      <div class="asidepanel" style="display: none;">
+            <button class="closePage" style="background: none;color: white;border: none;font-size: 35px; float: right;">ⅹ</button> 
+            <br> <br>
+            <p style="color: white;" align="center">Love profile</p> 
+            <div class="love_profile" align="center">
+                  <div class="profile1">
+                        <div class="profile1IMG" style="width: auto;
+                        height: auto;
+                        overflow: hidden;">
+                              <img src=""  style="max-height: 100px;
+                              max-width: 100px;
+                              vertical-align: middle;">
+                        </div>
+                        <button class="inputNameButton1">Name</button> <br>
+                        <div class="overallblack1" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.566); position: fixed; top: 0; left: 0; display: none;">
+                              <div class="overall" style="background-color: rgb(203, 148, 157); width: 100%; height: 200px; position: fixed; top: 3%; left: 0;">
+                                    <br>
+                                    <input type="text" class="inputName1" placeholder="Name" maxlength="10"> <br>
+                                    <button class="acceptButton1">Accept</button>
+                              </div>
+                        </div>
+                        <label for="input1" style="cursor: pointer; background-color: gray; color: white; padding: 5px; font-size: 10px;">Choose a photo</label>
+                        <input id="input1" type="file" onchange="uploadphoto1(this)" accept=".jpg, .png, .jfif, .jpeg" style="width: 0px;"> <br>
+                        
+                        
+                  </div>
+                  <p style="font-size: 50px; padding-left: 10px; padding-right: 10px; text-shadow: 1px 1px 4px rgb(255, 255, 255); cursor: default; color: white;">♡</p>
+                  <div class="profile2">
+                        <div class="profile2IMG" style="width: auto;
+                        height: auto;
+                        overflow: hidden;">
+                              <img src=""  style="max-height: 100px;
+                              max-width: 100px;
+                              vertical-align: middle;">
+                        </div>
+                        <button class="inputNameButton2">Name</button> <br>
+                        <div class="overallblack2" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.566); position: fixed; top: 0; left: 0; display: none;">
+                              <div class="overall" style="background-color: rgb(203, 148, 157); width: 100%; height: 200px; position: fixed; top: 3%; left: 0;">
+                                    <br>
+                                    <input type="text" class="inputName2" placeholder="Name" maxlength="10"> <br>
+                                    <button class="acceptButton2">Accept</button>
+                              </div>
+                        </div>
+                        <label for="input2" style="cursor: pointer; background-color: gray; color: white; padding: 5px; font-size: 10px;">Choose a photo</label>
+                        <input id="input2" type="file" onchange="uploadphoto2(this)" accept=".jpg, .png, .jfif, .jpeg" style="width: 0px;">
+                  </div>
+            </div>
+            <div class="dateSettings" align="center" style="background-color: rgb(188, 47, 71); padding: 20px; border-radius: 20px; margin-top: 10px;">
+                  <span style="color: white; font-size: 20px;">Start date:</span>
+                  <input type="date" class="dateinput" id="dateinput" onchange="setdate()" style="font-size: 17px;">
+            </div>
+            <div class="themesettings" align="center">
+                  <p style="color:  white; font-size: 20px;">Theme settings</p>
+                  <button class="colorPicker" style="background-color: blue;" id="blueTheme"></button>
+                  <button class="colorPicker" style="background-color: pink;" id="pinkTheme"></button>
+                  <button class="colorPicker" style="background-color: orange;" id="orangeTheme"></button>
+                  <button class="colorPicker" style="background-color: purple;" id="purpleTheme"></button>
+                  <button class="colorPicker" style="background-color: green;" id="greenTheme"></button>
+            </div>
+      </div>
+      <div class="content" style="margin-top: 100px;">
+            <div class="love_profile" align="center">
+                  
+                  <div class="profile1">
+                        <div class="profile1IMG" style="width: 100px;
+                        height: 100px;
+                        overflow: hidden; display: flex;align-items: center; padding: 2px; justify-content: center;">
+                              <img src=""  style="max-height: 100px;
+                              max-width: 100px;
+                              vertical-align: middle;">
+                        </div>
+                        <p class="name_content1"></p>
+                  </div>
+                  <div class="column" style="display: flex; flex-direction: column;">
+                        <p class="starteddate" style="color: white; padding: 0px 10px;"></p>
+                        <p style="font-size: 50px; padding-left: 10px; padding-right: 10px; text-shadow: 1px 1px 4px rgb(255, 255, 255); cursor: default; color: white;">♡</p>
+                  </div>
+                  
+                  <div class="profile2">
+                        <div class="profile2IMG" style="width: 100px;
+                        height: 100px;
+                        overflow: hidden; display: flex;align-items: center; padding: 2px; justify-content: center;">
+                              <img src=""  style="max-height: 100px;
+                              max-width: 100px;
+                              vertical-align: middle;">
+                        </div>
+                        <p class="name_content2"></p>
+                  </div>
+            </div>
+            <div class="blocks" align="center">
+                  <div class="block">
+                        <p class="blockName">10 days</p>
+                        <span class="blockNote" id="10days"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">30 days</p>
+                        <span class="blockNote" id="30days"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">50 days</p>
+                        <span class="blockNote" id="50days"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">100 days</p>
+                        <span class="blockNote" id="100days"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">200 days</p>
+                        <span class="blockNote" id="200days"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">300 days</p>
+                        <span class="blockNote" id="300days"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">One year</p>
+                        <span class="blockNote" id="1year"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">400 days</p>
+                        <span class="blockNote" id="400days"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">500 days</p>
+                        <span class="blockNote" id="500days"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">600 days</p>
+                        <span class="blockNote" id="600days"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">700 days</p>
+                        <span class="blockNote" id="700days"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">Two years</p>
+                        <span class="blockNote" id="2years"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">1000 days</p>
+                        <span class="blockNote" id="1000days"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">Three years</p>
+                        <span class="blockNote" id="3years"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">Four years</p>
+                        <span class="blockNote" id="4years"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">Five years</p>
+                        <span class="blockNote" id="5years"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">Ten years</p>
+                        <span class="blockNote" id="10years"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">15 years</p>
+                        <span class="blockNote" id="15years"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">20 years</p>
+                        <span class="blockNote" id="20years"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">30 years</p>
+                        <span class="blockNote" id="30years"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">40 years</p>
+                        <span class="blockNote" id="40years"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">50 years</p>
+                        <span class="blockNote" id="50years"></span>
+                  </div>
+                  <div class="block">
+                        <p class="blockName">100 years</p>
+                        <span class="blockNote" id="100years"></span>
+                  </div><div class="block">
+                        <p class="blockName">1000 years</p>
+                        <span class="blockNote" id="1000years"></span>
+                  </div>
+            </div>
+      </div>
+      <br>
+      
+
+      <script src="script.js"></script>
+</body>
+</html>

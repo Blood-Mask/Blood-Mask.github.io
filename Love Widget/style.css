@@ -1,0 +1,129 @@
+*{
+      margin: 0px;
+}
+html{
+      scroll-behavior: smooth;
+}
+body{
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+}
+.head{
+      top: 0;
+      width: 100%;
+      position: fixed;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      background-color: rgb(222, 81, 104);
+      color: white;
+      padding: 20px;
+}
+.head > p{
+      font-size: 30px;
+}
+.head > button{
+      background: none;
+      color: white;
+      border: none;
+      font-size: 50px;
+      transition: 0.3s ease;
+}
+.head button:hover{
+      color: pink;
+      text-shadow: 0px 0px 10px pink;
+}
+.asidepanel{
+      background-color: rgb(143, 52, 67);
+      height: 100%;
+      position: fixed;
+      top: 0;
+      padding: 20px;
+}
+.asidepanel > .a{
+      color: white;
+      font-size: 30px;
+      padding: 5px;
+}
+.love_profile{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(219, 51, 79);
+      padding: 20px;
+      border-radius: 20px;
+}
+.profile1IMG > img{
+      border-radius: 20px;
+      border: 1px solid white;
+}
+.profile2IMG > img{
+      border-radius: 20px;
+      border: 1px solid white;
+}
+.inputName1, .inputName2{
+      border-radius: 5px;
+      border: 1px solid white;
+      background-color: pink;
+      padding: 5px;
+      font-size: 18px;
+      width: 120px;
+}
+.inputNameButton1{
+      background-color: rgb(214, 162, 171);
+      border-radius: 5px;
+      padding: 5px;
+      color: white;
+      border: 1px solid white;
+}
+.inputNameButton2{
+      background-color: rgb(214, 162, 171);
+      border-radius: 5px;
+      padding: 5px;
+      color: white;
+      border: 1px solid white;
+}
+.acceptButton1, .acceptButton2{
+      padding: 5px;
+      background-color: rgb(222, 81, 104);
+      color: white;
+      font-size: 20px;
+      border-radius: 5px;
+      border: 1px solid white;
+      transition: 0.3s ease;
+}
+.acceptButton:hover, .acceptButton2:hover{
+      background-color: rgb(214, 162, 171);
+}
+.name_content1, .name_content2{
+      color: white;
+      font-size: 25px;
+      cursor: default;
+}
+.block{
+      background-color: rgb(167, 167, 167);
+      height: 50px;
+      max-width: 650px;
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 10px;
+}
+.blockName{
+      float: left;
+      color: white;
+      font-size: 40px;
+}
+.blockNote{
+      color: rgb(227, 227, 227);
+      font-size: 15px;
+}
+.colorPicker{
+      border: none;
+      height: 25px;
+      width: 25px;
+      cursor: pointer;
+}
