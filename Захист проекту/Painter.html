@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <canvas id="c" style="border: 1px solid black;"></canvas>
+    <button id="clear"></button>
+    <input type="color" id="color">
+    <script>
+var c = document.getElementById("c")
+var CTX = c.getContext("2d")
+c.width = 800
+c.height = 800
+let $clicked = false
+let x;
+let y;
+
+$("#clear").click(() => {
+    CTX.clearRect(0,0,c.width,c.height)
+})
+$( window ).mousemove((e) => {
+    x = e.offsetX
+    y = e.offsetY
+    if($clicked == true){
+        CTX.fillStyle = $("#color").val()
+        CTX.beginPath()
+        CTX.fillRect(x,y,5,5)
+        CTX.closePath()
+        CTX.fill()
+    }
+})
+$( window ).mousedown(() => {
+    $clicked = true
+})
+$( window ).mouseup(() => {
+    $clicked = false
+})
+    </script>
+</body>
+</html>
