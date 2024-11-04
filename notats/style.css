@@ -1,0 +1,133 @@
+@media screen and (max-height: 1200px) and (max-width: 500px) and (min-width: 20px) and (min-height: 20px){
+      .notateP{
+            width: 98%;
+      }
+}
+*{
+      margin: 0px;
+      word-wrap: break-word;
+}
+body{
+      background-color: rgb(189, 189, 189);
+      color: rgb(0, 0, 0);
+}
+.textarea{
+      background: rgb(62, 62, 62);
+      width: 99%;
+      height: 800px;
+      border-radius: 10px;
+      resize: none;
+      font-size: 30px;
+      border: none;
+}
+.textareaDIV{
+      display: flex;
+      justify-content: center;
+}
+.notateP{
+      margin-bottom: 20px;
+      display: flex;
+      font-size: 30px;
+      font-family: monospace;
+      background-color: rgb(157, 107, 15);
+      border-radius: 10px;
+      padding: 5px;
+      width: 98%;
+      max-width: 500px;
+      text-align: center;
+      color: white;
+      word-wrap: break-word;
+      cursor: pointer;
+      overflow: hidden;
+      justify-content: space-between;
+      align-items: center;
+}
+.noteBack{
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+      height: 100px;
+      width: 33%;
+      max-width: 150px;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.71);
+      color: white;
+      overflow: hidden;
+}
+.notateButton{
+      background-color: rgb(158, 0, 0);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 5px;
+      font-size: 22px;
+      transition: 0.3s ease;
+      cursor: pointer;
+}
+.notateButton:hover{
+      background-color: rgb(255, 220, 220);
+      color: black;
+      box-shadow: 3px 2px 1px black;
+}
+.c{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+}
+.addButton{
+      font-size: 25px;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      transition: 0.3s ease;
+      cursor: pointer;
+}
+.addButton:hover{
+      background-color: rgb(55, 55, 55);
+      color: white;
+      box-shadow: 2px 2px 1px white;
+}
+.input{
+      width: 100%;
+      max-width: 300px;
+      height: 25px;
+}
+.submitButton{
+      font-size: 25px;
+      padding: 5px;
+      border-radius: 10px;
+      border: none;
+      transition: 0.3s ease;
+      cursor: pointer;
+      margin-bottom: 20px;
+      background-color: rgb(160, 88, 228);
+      color: white;
+}
+.submitButton:hover{
+      background-color: rgb(55, 55, 55);
+      color: white;
+      box-shadow: 1px 1px 0px white;
+}
+.window{
+      position: absolute;
+      width: 100%;
+      max-height: 500px;
+      background-color: rgba(0, 0, 0, 0.738);
+      border-radius: 20px;
+      height: 100%;
+}
+#textarea {
+      margin: 5px;
+      max-height: 460px;
+      height: 200px;
+      max-width: 60%;
+      padding: 10px;
+      width: 60%;
+      border-radius: 5px;
+      font-size: 20px;
+      color: white;
+      background-color: rgb(62, 62, 62);
+      word-wrap: break-word;
+}

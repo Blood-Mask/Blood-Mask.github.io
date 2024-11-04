@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Нотатки</title>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      
+      <div class="window" align="center" style="display: none;">
+            <p class="noteNameP" style="color: white; margin: 20px; font-size: 20px; float: left;"></p> 
+            <button class="deleteBtn" style="float: right; margin: 20px; font-size: 20px;">Delete</button>
+            <br>
+            <button style="background: none; color: white; font-size: 35px;" title="Save and quit"><--</button> <br> <br>
+            <textarea id="textarea" type="text"></textarea>
+            
+      </div>
+
+      <div class="c">
+            <p>Notats</p>
+      <button class="addButton">Add</button> <br> <br>
+      <input type="text" style="display: none;" id="input" class="input" placeholder="Your note" maxlength="20">
+      <button class="submitButton" style="display: none;">Submit</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
