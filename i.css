@@ -8,7 +8,7 @@ body{
     font-family: "Barlow", sans-serif;
     font-weight: 500;
     font-style: normal;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imgs/LOGO.png');
+    background: linear-gradient(45deg, rgba(0, 8, 255, 0.588), rgba(0, 8, 255, 0.588)), url('imgs/LOGO.png');
     background-size: 3%;
     background-position-y: center;
 }
