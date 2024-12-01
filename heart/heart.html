@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="c"></div>
+    <div class="c2">
+        <button class="click">Click me</button>
+    </div>
+    <div class="heart">
+        ♡ <br>
+        <p class="popout2">I luv u</p>
+    </div>
+    <script>
+$('.click').click(() => {
+    $('.c').css({
+        "animation": "in 10s infinite"
+    })
+    $('.c2').css({
+        "animation": "fadeout 10s infinite"
+    })
+    $('.heart').css({
+        "animation": "popout 10s infinite"
+    })
+    $('.popout2').css({
+        "animation": "popout2 10s infinite"
+    })
+    setTimeout(() => {
+        $('.c').css({
+        "animation": "none"
+        })
+        $('.c2').css({
+            "animation": "none"
+        })
+        $('.heart').css({
+            "animation": "none"
+        })
+        $('.popout2').css({
+            "animation": "none"
+        })
+    }, 10000)
+})
+    </script>
+</body>
+</html>
