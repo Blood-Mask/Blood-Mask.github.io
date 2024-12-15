@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Mask</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="i.css">
+    <link rel="shortcut icon" href="imgs/LOGO.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="back" style="position: fixed; width: 100%; height: 100%; mix-blend-mode: screen; z-index: -10;">
+        <video autoplay muted loop class="video1" src="imgs/snow.mp4" style="mix-blend-mode: multiply;" id="videoInput"></video>
+    </div>
+    <div class="center" align="center">
+        <div class="header">
+            <a href="i.html">Albums</a>
+            <a href="news.html">News</a>
+        </div>
+        <img src="imgs/LOGO.png" class="rotatedImg">
+        <p class="AlbumsP" style="background-color: rgb(255, 255, 255); max-width: 300px; font-size: 20px;">News</p>
+
+        <div class="post"> 
+            <p class="date">15.12.2024</p>
+            <img src="imgs/complecsy.jpg" class="articleImg">
+            <p class="postArticle">КОМПЛЕКСИ</p> 
+            <p class="postContent"><i>Soon.</i> <br> <br>
+                Tracklist at this moment: <br>
+                □Моє справжнє я<br>
+                □Для мене<br>
+                □Мене розриває на шматки<br>
+                □Розмальований у пітьмі<br>
+                □Харчовий ланцюг<br>
+                □Цикл<br>
+                □Чи знаю я, що я — людина<br>
+                □Шутки<br>
+                □Я вважаю, що відстань можливо подолати
+            </p>
+        </div>
+
+        <div class="post"> 
+            <p class="date">25.11.2024</p>
+            <img src="imgs/! Winter D.E.A.T.H.png" class="articleImg">
+            <p class="postArticle">Winter D.e.a.t.h</p> 
+            <p class="postContent"><i>Is out on 01.12.2024!</i> <br> <br>
+                Tracklist: <br>
+                □New Year <br>
+                □I'M DYING <br>
+                □PUNISHMENT <br>
+                □SEE MYSELF + BE MYSELF <br>
+                □THE DARK SIDE OF WORLD <br>
+                □THORNS <br>
+                □WE LIVE TO DIE <br>
+                □Привичка <br>
+                □Через що я можу заплакати <br>
+            </p>
+        </div>
+
+        <div class="post"> 
+            <p class="date">23.11.2024</p>
+            <img src="imgs/newyear.png" class="articleImg">
+            <p class="postArticle">New year and other snippets</p> 
+            <p class="postContent"><br> <br>
+                Watch on <a href="https://youtu.be/vEpYibddcSo?si=z_NnprRbpPrhoGoy" target="_blank">Youtube</a> snippet from the track "New Year" and snippet from <a href="https://www.youtube.com/watch?v=dX-8NqeH1I0" target="_blank">"I'M DYING"</a>.
+            </p>
+        </div>
+
+        <div class="post"> 
+            <p class="date">28.10.2024</p>
+            <img src="imgs/! DARK THOUGHTS.png" class="articleImg">
+            <p class="postArticle">DARK THOUGHTS</p> 
+            <p class="postContent"><i>It was supposed to be released much earlier :/</i> <br> <br>
+                Watch on <a href="https://www.youtube.com/watch?v=v9kFVNsxkQk&list=OLAK5uy_mSJ-iUp2Qqnh0tqyYlnogoZHm9OrEDONs" target="_blank">Youtube</a> from Topic <br>
+                Watch on <a href="https://www.youtube.com/watch?v=j8CPm051HnM&t=7s" target="_blank">Youtube</a> from main channel
+            </p>
+        </div>
+
+        <div class="footer" style="background-color: rgba(255, 255, 255, 0.85);">
+            <img src="imgs/dh2.png" width="100px" class="rotatedImg2" style="animation: an1 infinite 2.5s linear;"> <br>
+            <div class="allLinks">
+                <a href="https://t.me/bloodmvsk" target="_blank">Telegram</a> <br>
+                <a href="https://www.youtube.com/channel/UCrJQedN_myEvZrmqUjmzncw" target="_blank">Youtube</a> <br>
+                <a href="https://open.spotify.com/artist/7vlOwDhMCcIbXNz3g9XR1W?si=Y18Hn6BoRy-5pEGGHoEhjg" target="_blank">Spotify</a> <br>
+                <a href="https://on.soundcloud.com/qgifRcZwBJzgjphx7" target="_blank">SoundCloud</a>
+            </div>
+            ostap7534@gmail.com <br>
+            <i>blood-mask.github.io</i> <br>
+        </div>
+    </div>
+<script>
+let d = new Date()
+switch(d.getMonth()){
+    case 11: 
+    case 0: 
+    case 1: 
+        $('#videoInput').attr('src', 'imgs/snow.mp4')
+        break
+    case 2: 
+    case 3: 
+    case 4: 
+        $('#videoInput').attr('src', 'none')
+        break
+    case 5: 
+    case 6: 
+    case 7: 
+        $('#videoInput').attr('src', 'none')
+        break
+    case 8: 
+    case 9: 
+    case 10: 
+        $('#videoInput').attr('src', 'imgs/rainBACKGROUND.mp4')
+        break
+}
+</script>
+</body>
+</html>
