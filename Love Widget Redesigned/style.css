@@ -1,0 +1,144 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: "Barlow", serif;
+    background-color: rgb(34, 10, 33);
+}
+.header > .openMenuButton{
+    background: none;
+    border: none;
+    transition: 0.3s ease;
+}
+.header > .openMenuButton > img{
+    max-width: 65px;
+    filter: invert(100%);
+}
+.header > .openMenuButton:hover{
+    transform: scale(1.1);
+}
+.header > .openMenuButton:active{
+    transform: scale(0.8);
+}
+.img1, .img2{
+    margin: 10px;
+    max-width: 150px;
+    max-height: 150px;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.name1, .name2{
+    color: white;
+}
+.middle2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middle{
+    display: flex;
+    flex-direction: column;
+}
+.middle > .heart{
+    max-width: 50px;
+}
+.middle > span{
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+.settings{
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.905);
+}
+.namein{
+    width: 80%;
+    border: none;
+    height: 30px;
+    transition: 0.3s ease;
+}
+.namein:hover{
+    box-shadow: 0px 0px 10px white;
+}
+.namein:focus{
+    box-shadow: 0px 0px 5px rgb(255, 0, 221);
+    outline: none;
+    border-radius: 8px;
+}
+.middle2 > label:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.middle2 > label{
+    transition: 0.3s ease;
+}
+.middle2 > label:active{
+    transform: scale(0.9);
+}
+.saveBtn{
+    width: 100px;
+    font-size: 20px;
+    background-color: rgb(54, 0, 52);
+    color: white;
+    border: none;
+    padding: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.saveBtn:hover{
+    background-color: rgb(255, 0, 221);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(255, 0, 221);
+}
+.saveBtn:active{
+    box-shadow: 0px 0px 5px rgb(255, 0, 221);
+    background-color: rgb(34, 10, 33);
+}
+.dateIn{
+    transition: 0.3s ease;
+    font-size: 17px;
+    outline: none;
+    border: none;
+}
+.dateIn:hover{
+    box-shadow: 0px 0px 10px white;
+}
+.dateIn:focus{
+    box-shadow: 0px 0px 5px rgb(255, 0, 221);
+    outline: none;
+    border-radius: 8px;
+}
+.theme1,.theme2,.theme3,.theme4,.theme5,.theme6{
+    cursor: pointer;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    transition: 0.2s ease;
+}
+.theme1:hover,.theme2:hover,.theme3:hover,.theme4:hover,.theme5:hover,.theme6:hover{
+    transform: scale(1.1);
+}
+.dBlock{
+    background-color: rgb(54, 0, 52);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+    max-width: 550px;
+}
+.dBlock > p{
+    font-size: 45px;
+    font-weight: 600;
+}
+.dBlock > span{
+    color: gray;
+}

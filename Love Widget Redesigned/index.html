@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="shortcut icon" href="imgs/love.svg" type="image/x-icon">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="settings" align="center" style="display: none; opacity: 0%;" id="settings">
+        <div class="profile">
+            <div class="middle2">
+                <label for="fileInput1" style="color: white; background-color: black; margin-bottom: 20px;">
+                    <img src="imgs/user.jpg" class="img1">
+                </label>
+                <input id="name1" type="text" value="name" style="text-align: center;" maxlength="15" class="namein">
+                <input type="file" id="fileInput1" style="display: none;" onchange="upload1(this)" accept=".png, .jpg, .jpeg, .webm">
+            </div>
+            <div class="middle">
+                <img src="imgs/love.svg" class="heart">
+                <span class="days">195 days</span>
+            </div>
+            <div class="middle2">
+                <label for="fileInput2" style="color: white; background-color: black; margin-bottom: 20px;">
+                    <img src="imgs/user.jpg" class="img2">
+                </label>
+                <input id="name2" type="text" value="name" style="text-align: center;" maxlength="15" class="namein">
+                <input type="file" id="fileInput2" style="display: none;" onchange="upload2(this)" accept=".png, .jpg, .jpeg, .webm">
+            </div>
+        </div>
+        <br>
+        <br>
+        <label for="dateIn" style="color: white;">Started date:</label> <br>
+        <input type="date" id="dateIn" class="dateIn">
+        <br>
+        <br>
+        <span style="color: white;">Theme</span> <br>
+        <div class="themes">
+            <div class="theme1" style="background-color: blue;"></div>
+            <div class="theme2" style="background-color: pink;"></div>
+            <div class="theme3" style="background-color: green;"></div>
+            <div class="theme4" style="background-color: purple;"></div>
+            <div class="theme5" style="background-color: red;"></div>
+            <div class="theme6" style="background-color: yellow;"></div>
+        </div>
+        <br>
+        <br>
+        <button class="saveBtn">Save</button>
+    </div>
+    <div class="header" align="center">
+        <button class="openMenuButton"><img src="imgs/menu.png"></button>
+    </div>
+    <div class="profile" align="center">
+        <div class="middle2">
+            <img src="imgs/user.jpg" class="img1">
+            <p class="name1">name</p>
+        </div>
+        <div class="middle">
+            <img src="imgs/love.svg" class="heart">
+            <span class="days">195 days</span>
+        </div>
+        <div class="middle2">
+            <img src="imgs/user.jpg" class="img2">
+            <p class="name2">name</p>
+        </div>
+    </div>
+    <div class="daysBlock" align=center></div>
+<script src="index.js"></script>
+</body>
+</html>
