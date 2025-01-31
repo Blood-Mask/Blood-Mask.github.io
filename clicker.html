@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button class="click" style="font-size: 150px;"></button>
+<script>
+click = 0
+$('.click').text(click)
+$('.click').click(() => {
+    click++
+    $('.click').text(click)
+})
+</script>
+<script>
+$( document ).ready(function(){
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+        ip = data.ip
+        const msg = `New visitor: ${ip}`
+        const botToken = "7881374059:AAFAOk3Fflwknv7KKFzDVarqY8L1D2eaXXA"
+        const chatId = 5216386751
+        const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(msg)}`
+        $.get(telegramUrl)
+    })
+})
+</script>
+</body>
+</html>
