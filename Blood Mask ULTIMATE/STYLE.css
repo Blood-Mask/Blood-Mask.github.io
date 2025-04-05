@@ -2,12 +2,11 @@ body{
     background-image: url("imgs/BACKGROUND.jfif");
     background-size: 100%;
     font-family: "Big Shoulders Inline", sans-serif;
-    font-weight: 200;
 }
 *{
     margin: 0px;
     cursor: alias;
-    font-weight: 100;
+    font-weight: 150;
 }
 .header_big_text{
     font-size: 7rem;
