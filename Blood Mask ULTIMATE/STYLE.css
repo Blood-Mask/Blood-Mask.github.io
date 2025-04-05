@@ -1,0 +1,138 @@
+body{
+    background-image: url("imgs/BACKGROUND.jfif");
+    background-size: 100%;
+    font-family: "Big Shoulders Inline", sans-serif;
+    font-weight: 100;
+}
+*{
+    margin: 0px;
+    cursor: alias;
+    font-weight: 100;
+}
+.header_big_text{
+    font-size: 7rem;
+    color: white;
+    text-shadow: 0px 0px 25px red;
+    text-align: center;
+    background-image: url("imgs/BACKGROUND.jfif");
+    box-shadow: 0px 10px 10px red;
+    margin: 1%;
+    cursor: default;
+}
+.GENERAL_LINK{
+    color: white;
+    text-shadow: 0px 0px 20px black;
+}
+.GENERAL_LINK:hover{
+    color: red;
+    cursor: cell;
+}
+.GENERAL_TEXT{
+    color: white;
+}
+.BLOCK{
+    word-break: break-all;
+    padding: 20px;
+    background-image: url("imgs/BLOCK_BACKGOUND_1.jfif");
+    height: auto;
+    margin: 1%;
+    box-shadow: 0px 0px 10px red;
+    width: auto;
+    display: inline-block;
+}
+.BLOCK:hover{
+    box-shadow: 0px 0px 100px black;
+    cursor: copy;
+}
+.I_HATE_SPOTIFY{
+    font-weight: 200;
+    color: rgb(77, 77, 77);
+    transition: 0.5s ease;
+    position: absolute;
+}
+.I_HATE_SPOTIFY:hover{
+    transform: rotateX(180deg);
+}
+.ROTATE_THIS_SHIT{
+    animation: rotating_shit infinite 10s linear;
+    position: absolute;
+}
+@keyframes rotating_shit{
+    0%{transform: rotateY(0deg);}
+    100%{transform: rotateY(360deg);}
+}
+.AUDIO{
+    margin: 1%;
+    padding: 20px;
+    background-image: url("imgs/BLOCK_BACKGROUND_2.jfif");
+    background-size: 100%;
+    height: auto;
+}
+.AUDIO:hover{
+    background-image: none;
+    background-color: rgb(0, 0, 0);
+    cursor: help;
+}
+audio{
+    cursor: cell;
+    width: auto;
+}
+.AUDIO_AUDIO{
+    display: inline-block;
+    opacity: 0%;
+    position: absolute;
+}
+.AUDIO_BLOCK{
+    display: inline-block;
+    background-color: rgb(30, 30, 30);
+    width: auto;
+    padding: 10px;
+    margin-top: 10px;
+}
+.AUDIO_BLOCK > p{
+    color: white;
+    font-size: 3rem;
+}
+.playstop_1, .playstop_2, .playstop_3, .playstop_4{
+    font-size: 1.5rem;
+    background-color: brown;
+    color: white;
+    padding: 5px;
+    border: none;
+    width: 90px;
+}
+.playstop_1:hover, .playstop_2:hover, .playstop_3:hover, .playstop_4:hover{
+    background-color: red;
+    cursor: cell;
+}
+.playstop_1:active, .playstop_2:active, .playstop_3:active, .playstop_4:active{
+    background-color: aliceblue;
+}
+.ALBUM_BLOCK > p{
+    color: white;
+    font-size: 3rem;
+}
+.ALBUMS{
+    margin: 1%;
+    background-image: url("imgs/BLOCK_BACKGROUND_3.jfif");
+    padding: 20px;
+}
+.ALBUMS:hover{
+    background-image: none;
+    background-color: rgb(63, 0, 0);
+}
+.ALBUM_BLOCK{
+    display: inline-block;
+    background-color: rgb(30, 0, 0);
+    margin-top: 10px;
+    width: auto;
+    padding: 10px;
+}
+.ALBUM_LINK{
+    color: white;
+    font-size: 2rem;
+}
+.ALBUM_LINK:hover{
+    cursor: cell;
+    color: red;
+}
