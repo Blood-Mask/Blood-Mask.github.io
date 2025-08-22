@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<style>
+body{
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.emote{
+    width: fit-content;
+    font-size: 4rem;
+}
+button{
+    background-color: rgb(140, 52, 66);
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    margin-top: 5px;
+}
+.yes:hover{
+    background-color: green;
+}
+.no:hover{
+    background-color: red;
+}
+</style>
+</head>
+<body align="center">
+<h1></h1>
+<div class="emote" style="scale: 0;"></div>
+<button class="yes">Я тебе теж!</button>
+<button class="no">А я тебе не кохаю</button>
+<script>
+let clicks = 0
+let faces = ['😊','😃','😐','☹','😠','🤬']
+let phrases = ['Я тебе дуже-дуже сильно кохаю, сонце!! А ти мене??',"Точно?","Ти впевнена?","От прям стопудово? :(",`Нажми на "Я тебе теж"!!`,"Сука"]
+function r(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+$(document).ready(() => {
+    $('.emote').animate({"scale": 1})
+    $('.emote').text(faces[0])
+    $("h1").text(phrases[0])
+})
+$(".yes").click(() => {
+    $("body").empty()
+    $("body").append(`
+        <h1>Йеееее!!😋</h1>
+        <img src="gif.gif"></img>
+    `)
+})
+$(".no").click(() => {
+    if(clicks == 4){
+        $('.emote').animate({"scale": 0}, function(){
+                $(".emote").text(faces[clicks])
+                $("h1").text(phrases[clicks])
+                $('.emote').animate({"scale": 1}, function(){
+                    $('.no').animate({"scale": 0})
+                })
+        })
+    }
+    $('.emote').animate({"scale": 0}, function(){
+            $(".emote").text(faces[clicks])
+            $('.emote').animate({"scale": 1})
+            $("h1").text(phrases[clicks])
+    })
+    clicks++
+    console.log(clicks)
+})
+</script>
+</body>
+</html>
