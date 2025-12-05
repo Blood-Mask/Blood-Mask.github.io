@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Mask</title>
+    <link rel="stylesheet" href="STYLE.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="imgs/LOGO.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+
+
+</head>
+<body title="why am I suffering">
+
+<p class="header_big_text" title="What should I do?">Blood Mask</p>
+
+<div class="BLOCK">
+    <p class="GENERAL_TEXT" style="font-size: 5rem;">This is my Tg Bot</p>
+    <a href="https://t.me/bloodmvskBOT" class="GENERAL_LINK" target="_blank" style="font-size: 3rem;">Tg Bot</a>
+</div>
+
+<div class="BLOCK" style="background-image: url('imgs/BLOCK_BACKGROUND_2.jfif');">
+    <p class="GENERAL_TEXT" style="font-size: 5rem;">This is my <br> <span class="ROTATE_THIS_SHIT">Youtube</span></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="https://www.youtube.com/@BLOODMVSK" class="GENERAL_LINK" target="_blank" style="font-size: 3rem;">Youtube</a>
+</div>
+
+<div class="BLOCK" style="background-image: url('imgs/BLOCK_BACKGROUND_3.jfif');">
+    <p class="GENERAL_TEXT" style="font-size: 5rem;"><span class="I_HATE_SPOTIFY">/hate/it/</span> This is my spotify.  </p>
+    <a href="https://open.spotify.com/artist/7vlOwDhMCcIbXNz3g9XR1W?si=PRCQUIcIQ9GXTnHUTSQFGQ" class="GENERAL_LINK" target="_blank" style="font-size: 3rem;">spotify</a>
+</div>
+
+<div class="AUDIO">
+    <p style="font-size: 4rem; color: white;">These are my tracks</p> <br>
+    <div class="AUDIO_BLOCK" align="center" title="i like this track">
+        <p>GREAT THINGS</p>
+        <button class="playstop_1" id="playstop_1">Play</button>
+        <audio src="audio/6 great things.mp3" controls class="AUDIO_AUDIO" id="playstop_1_audio"></audio> 
+    </div>
+    <div class="AUDIO_BLOCK" align="center" title="i like this track too">
+        <p>HIDING BEHIND YOU</p>
+        <button class="playstop_2" id="playstop_2">Play</button>
+        <audio src="audio/9 hiding behind you.mp3" controls class="AUDIO_AUDIO" id="playstop_2_audio"></audio>
+    </div>
+    <div class="AUDIO_BLOCK" align="center" title="why are you doing this to me">
+        <p>OLD JOE LIKES HARDCORE</p>
+        <button class="playstop_3" id="playstop_3">Play</button>
+        <audio src="audio/7 Old Joe likes HARDCORE.mp3" controls class="AUDIO_AUDIO" id="playstop_3_audio"></audio>
+    </div>
+    <div class="AUDIO_BLOCK" align="center" title="why">
+        <p>OFF THE ROAD</p>
+        <button class="playstop_4" id="playstop_4">Play</button>
+        <audio src="audio/Off the road.mp3" controls class="AUDIO_AUDIO" id="playstop_4_audio"></audio>
+    </div>
+</div>
+
+<div class="ALBUMS">
+    <p style="font-size: 4rem; color: white;">If you want, listen to my albums</p> <br>
+    <div class="ALBUM_BLOCK" align="center" title="The best album in my career">
+        <p>HTOS SHCHASLYVYY</p> 
+        <a href="https://youtu.be/eg1Sg9NIdk4?si=sVWCH7JwWafXXfOq" target="_blank" class="ALBUM_LINK">Youtube</a> <br>
+    </div>
+    <div class="ALBUM_BLOCK" align="center" title="Old Joe rules the world">
+        <p>MEMOIRS OF OLD JOE</p>
+        <a href="https://youtu.be/evzEiJcKtLU?si=f40T1-XGvOe3eJTI" target="_blank" class="ALBUM_LINK">Youtube</a> <br>
+    </div>
+    <div class="ALBUM_BLOCK" align="center" title="WOW!0x20Wow!0x20signal">
+        <p>WOW</p> 
+        <a href="https://youtu.be/H7JE0eXvYec?si=DBN8NQqI-3GuZ-ez" target="_blank" class="ALBUM_LINK">Youtube</a> <br>
+    </div>
+</div>
+
+<script>
+let button_list = ["playstop_1","playstop_2","playstop_3","playstop_4"]
+let audio_list = ["playstop_1_audio","playstop_2_audio","playstop_3_audio","playstop_4_audio"]
+button_list.forEach(el => {
+    let button_element = document.getElementById(el)
+    let index = button_list.indexOf(el)
+    button_element.onclick = () => {
+        if(button_element.innerHTML == "Play"){
+            document.getElementById(audio_list[index]).play()
+            button_element.innerHTML = "Pause"
+        }else{
+            document.getElementById(audio_list[index]).pause()
+            button_element.innerHTML = "Play"
+        }
+    }  
+})
+$('.header_big_text').click(() => {
+    alert("Why am I suffering")
+})
+</script>
+<!-- DATE -->
+<script>
+const date = new Date();
+const day = date.getDate();
+
+switch(date.getMonth()){
+    case 11:
+    case 0: 
+    case 1: 
+        $(".BLOCK").css("background-image", "url('imgs/BLUE_BLOCK_BACKGROUND_1.jfif')");
+        $(".ALBUMS").css("background-image", "url('imgs/BLUE_BLOCK_BACKGROUND_2.jfif')");
+        $("body").css("background-image", "url('imgs/BLUE_BACKGROUND.jfif')");
+        $(".header_big_text, .AUDIO").css("background-image", "url('imgs/BLUE_BLOCK_BACKGROUND_3.jfif')");
+        $(".header_big_text, .BLOCK").css("box-shadow", "0px 10px 10px darkblue");
+        $(".playstop_1, .playstop_2, .playstop_3, .playstop_4").css("background", "darkblue");
+        $(".ALBUM_BLOCK").css("background", "rgb(0 0 30)");
+        break;
+    case 2: 
+    case 3: 
+    case 4: 
+        $(".BLOCK").css("background-image", "url('imgs/GREEN_BLOCK_BACKGROUND_1.jfif')");
+        $(".ALBUMS").css("background-image", "url('imgs/GREEN_BLOCK_BACKGROUND_2.jfif')");
+        $("body").css("background-image", "url('imgs/GREEN_BACKGROUND.jfif')");
+        $(".header_big_text, .AUDIO").css("background-image", "url('imgs/GREEN_BLOCK_BACKGROUND_3.jfif')");
+        $(".header_big_text, .BLOCK").css("box-shadow", "0px 10px 10px darkgreen");
+        $(".playstop_1, .playstop_2, .playstop_3, .playstop_4").css("background", "darkgreen");
+        $(".ALBUM_BLOCK").css("background", "rgb(3 30 0)");
+        break;
+    case 8: 
+    case 9: 
+    case 10: 
+        $(".BLOCK").css("background-image", "url('imgs/ORANGE_BLOCK_BACKGROUND_1.jfif')");
+        $(".ALBUMS").css("background-image", "url('imgs/ORANGE_BLOCK_BACKGROUND_2.jfif')");
+        $("body").css("background-image", "url('imgs/ORANGE_BACKGROUND.jfif')");
+        $(".header_big_text, .AUDIO").css("background-image", "url('imgs/ORANGE_BLOCK_BACKGROUND_3.jfif')");
+        $(".header_big_text, .BLOCK").css("box-shadow", "0px 10px 10px darkorange");
+        $(".playstop_1, .playstop_2, .playstop_3, .playstop_4").css("background", "darkorange");
+        $(".ALBUM_BLOCK").css("background", "rgb(30 12 0)");
+        break;
+    default: 
+        break;
+}
+if(day == 6 && date.getMonth() == 7){
+    $("body").empty();
+    $("body").append(`
+        <p style="font-size: 5rem; color:white;">Why did you do this to me.</p>
+    `)
+}
+else if(day == 12 && date.getMonth() == 6){
+    $("*").css("background-image","none");
+    $("*").prop("title","");
+
+    $(".BLOCK").css("background", "hotpink");
+    $(".ALBUMS").css("background", "hotpink");
+    $("body").css("background", "deeppink");
+
+    $(".header_big_text, .AUDIO").css("background", "hotpink");
+    $(".header_big_text, .BLOCK").css("box-shadow", "0px 10px 10px hotpink");
+    $(".header_big_text").text("Luv u :3");
+
+    $(".AUDIO_BLOCK").css("background", "deeppink");
+
+    $(".playstop_1, .playstop_2, .playstop_3, .playstop_4").css("background", "hotpink");
+    $(".ALBUM_BLOCK").css("background", "deeppink");
+}
+</script>
+</body>
+</html>
