@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    background: #000000;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== HEADER ===== */
+
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #050505;
+    border-bottom: 1px solid #003322;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.header span {
+    font-size: 14px;
+    color: white;
+}
+
+/* ===== MAIN ===== */
+
+.main {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.device-title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: white;
+}
+
+/* ===== DISPLAY (OLED look) ===== */
+
+.display {
+    background: #000;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #004d33;
+    margin-bottom: 40px;
+}
+
+.menu p {
+    font-family: monospace;
+    color: white;
+    margin: 3px 0;
+    font-weight: 500;
+}
+
+.menu .active {
+    color: white;
+    font-weight: 700;
+}
+
+/* ===== CONTROLS ===== */
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.controls button {
+    padding: 8px 16px;
+    background: #001a11;
+    border: 1px solid #004d33;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.controls button:hover {
+    background: #003322;
+}
+
+.controls .ok {
+    background: #004d33;
+    border-color: #00ff66;
+}
+
+/* ===== FEATURES ===== */
+
+.features {
+    margin-bottom: 40px;
+}
+
+.features h2 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.features ul,
+.install-step p {
+    color: white;
+    font-weight: 400;
+}
+
+/* ===== INSTALL SECTION ===== */
+
+.install {
+    margin-bottom: 50px;
+}
+
+.install h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.install-step {
+    background: #050505;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #003322;
+    transition: 0.2s;
+}
+
+.install-step:hover {
+    border-color: #00ff66;
+    box-shadow: 0 0 10px rgba(0,255,0,0.2);
+}
+
+.install-step h3 {
+    margin-bottom: 8px;
+    color: white;
+}
+
+.install-step p {
+    color: white;
+    line-height: 1.6;
+}
+
+/* ===== BUTTON ===== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #003322;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid #00ff66;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #004d33;
+    box-shadow: 0 0 12px rgba(0,255,0,0.3);
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    background: #050505;
+    border-top: 1px solid #003322;
+    color: white;
+}
